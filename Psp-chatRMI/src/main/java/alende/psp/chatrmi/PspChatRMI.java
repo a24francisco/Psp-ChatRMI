@@ -4,6 +4,7 @@
 
 package alende.psp.chatrmi;
 
+import alende.psp.chatrmi.interfaz.Chat;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -58,6 +59,7 @@ private Map<String,Chat> user= new HashMap<>();
     @Override
     public void Register(String name, Chat chat) throws RemoteException {
             user.put(name, chat);
+            System.out.println(name);
     }
 
     @Override
@@ -69,4 +71,9 @@ private Map<String,Chat> user= new HashMap<>();
         return users;
        
     }
+
+    @Override
+    public void Unregister(String name) throws RemoteException {
+            user.remove(name);
+        }
 }
