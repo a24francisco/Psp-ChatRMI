@@ -18,6 +18,7 @@ public interface Chat extends Remote{
     public void Register(String name,Chat chat) throws RemoteException;
     public void Unregister(String name) throws RemoteException;
     public List<String> usuarios() throws  RemoteException;
+    public Chat getChat(String name) throws  RemoteException;
     
     
     

@@ -48,12 +48,7 @@ private Map<String,Chat> user= new HashMap<>();
 
     @Override
     public void sendMessage(String from, String to, String message) throws RemoteException {
-        Chat receptor=user.get(to);
-        if (receptor==null) {
-            System.out.println("Usuario no existente");
-            return;
-        }
-        receptor.receiveMessage(from, message);
+      
     }
 
     @Override
@@ -76,4 +71,9 @@ private Map<String,Chat> user= new HashMap<>();
     public void Unregister(String name) throws RemoteException {
             user.remove(name);
         }
+
+    @Override
+    public Chat getChat(String name) throws RemoteException {
+        return user.get(name);
+    }
 }
