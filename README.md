@@ -13,4 +13,4 @@ La distribución en paquetes y clases es la siguiente:
 
 ## 3-Requisitos
 - Sistema operativo compatible con java
-- Arrancar el servifor antes que los clientes
+- Arrancar el servidor antes que los clientes
